@@ -1,0 +1,21 @@
+---
+- name: Rodar as roles
+  hosts: localhost
+  become: yes
+
+  vars_prompt:
+  - name: task
+    prompt: "Escolha a task a ser feita"
+    private: no
+  - name: user_name
+    prompt: "Coloque o nome do usuario"
+    private: no
+  - name: user_pass
+    prompt: "Coloque a senha (para adduser)"
+    private: yes
+  - name: new_pass
+    prompt: "Coloque a nova senha (para newpass)"
+    private: yes
+
+  roles:
+    - "{{ role }}"

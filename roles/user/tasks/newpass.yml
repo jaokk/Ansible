@@ -1,0 +1,5 @@
+---
+- name: nova senha
+  user:
+    name: "{{ user_name }}"
+    password: "{{ new_pass | password_hash('sha512') }}"

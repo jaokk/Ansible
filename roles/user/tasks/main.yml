@@ -1,0 +1,6 @@
+---
+- name: adicionar um usuario em uma maquina
+  include_tasks: "{{ task }}.yml"
+#  include_tasks: adduser.yml
+#  include_tasks: rmuser.yml
+#  include_tasks: newpass.yml
